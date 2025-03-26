@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pokémon Extension</title>
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/table.css" />
+  <link rel="stylesheet" href="css/theme.css" />
+</head>
+<body>
+  <h2 id="title">Pokémon by Base Experience</h2>
+
+  <div class="switch-wrapper">
+    <label class="switch">
+      <input type="checkbox" id="themeToggle" />
+      <span class="slider round"></span>
+    </label>
+    <span id="themeLabel">🌙 Dark Mode</span>
+  </div>
+
+  <div id="pokemon-list">
+    <input id="searchInput" type="text" placeholder="Search by name..." />
+    <div id="pokemon-table-container">Loading...</div>
+  </div>
+
+  <div id="pokemon-details" style="display: none;">
+    <button id="backButton">← Back</button>
+    <h3 id="detail-name"></h3>
+    <img id="detail-sprite" src="" alt="Sprite" style="max-width: 100px;" />
+    <p><strong>Experience:</strong> <span id="detail-experience"></span></p>
+    <p><strong>Height:</strong> <span id="detail-height"></span></p>
+    <p><strong>Weight:</strong> <span id="detail-weight"></span></p>
+    <p><strong>Types:</strong> <span id="detail-types"></span></p>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

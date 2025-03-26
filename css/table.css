@@ -1,0 +1,50 @@
+#pokemon-table-container {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+th, td {
+  padding: 6px 8px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+th {
+  position: sticky;
+  top: 0;
+  background-color: #f0f0f0;
+  z-index: 1;
+}
+
+tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+
+/* Sticky headers with sort indicators */
+th[data-col] {
+  cursor: pointer;
+  padding-right: 20px;
+}
+
+th[data-col]::after {
+  content: '';
+  display: inline-block;
+  margin-left: 4px;
+  font-size: 12px;
+}
+
+th.sorted-asc::after {
+  content: '▲';
+}
+
+th.sorted-desc::after {
+  content: '▼';
+}
